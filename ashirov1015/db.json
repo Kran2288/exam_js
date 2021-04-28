@@ -1,0 +1,100 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "name": "Холодильник",
+      "surname": "70кг",
+      "patronymic": "14",
+      "phone": "1256",
+      "price": "40000",
+      "date": "1998-10-21T13:28:06.419Z",
+      "group": "191-322",
+      "course": 2,
+      "edit": false
+    },
+    {
+      "id": 3,
+      "name": "Белый бим",
+      "surname": "0.8кг",
+      "patronymic": "23",
+      "phone": "1943",
+      "price": "800",
+      "date": "1998-10-21T13:28:06.419Z",
+      "group": "191-322",
+      "course": 3,
+      "edit": false
+    },
+    {
+      "id": 4,
+      "name": "Iphone10",
+      "surname": "1кг",
+      "patronymic": "12",
+      "phone": "1254",
+      "price": "40000",
+      "date": "1998-10-21T13:28:06.419Z",
+      "group": "191-322",
+      "course": 4,
+      "edit": false
+    },
+    {
+      "id": 9,
+      "name": "Алые паруса",
+      "surname": "1кг",
+      "patronymic": "18",
+      "phone": "1235",
+      "price": "1000",
+      "date": "1991-06-25T00:00:00.000Z",
+      "course": 3,
+      "group": "203-45",
+      "edit": false
+    },
+    {
+      "id": 11,
+      "name": "Микроволновка",
+      "surname": "20кг",
+      "patronymic": "12",
+      "phone": "1267",
+      "price": "20000",
+      "date": "2001-05-25T00:00:00.000Z",
+      "course": 2,
+      "group": "191-545",
+      "edit": false
+    },
+    {
+      "id": 12,
+      "name": "Телевизор",
+      "surname": "10кг",
+      "patronymic": "16",
+      "phone": "1257",
+      "price": "50000",
+      "date": "2000-04-12T00:00:00.000Z",
+      "course": 2,
+      "group": "181-321",
+      "edit": false
+    },
+    {
+      "id": 13,
+      "name": "Iphone12",
+      "surname": "1кг",
+      "patronymic": "43",
+      "phone": "7432",
+      "price": "60000",
+      "date": "1998-06-25T00:00:00.000Z",
+      "course": 4,
+      "group": "171-344",
+      "edit": false
+    },
+    {
+      "id": 14,
+      "name": "Диван",
+      "surname": "50кг",
+      "patronymic": "13",
+      "phone": "1234",
+      "price": "50000",
+      "date": "1313-02-12T00:00:00.000Z",
+      "course": 1,
+      "group": "191-322",
+      "edit": false
+    }
+  ]
+}

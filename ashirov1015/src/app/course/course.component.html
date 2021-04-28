@@ -1,0 +1,86 @@
+<ng-container>
+    <h1 *ngIf="course == 1">Мебель</h1>
+    <h1 *ngIf="course == 2">Техника</h1>
+    <h1 *ngIf="course == 3">Книги</h1>
+    <h1 *ngIf="course == 4">Телефоны</h1>
+    <div class="row">
+        <div class="col-6">
+            <span>Сортировать по:</span>
+            <form [formGroup]='sortForm'>
+                <select formControlName='sortType' class='custom-select' (click)="currentInstrument()">
+            <option [ngValue]='"higherId"'>убыванию цены</option>
+            <option [ngValue]='"lowerId"'>возрастания цены</option>
+            <option [ngValue]='"lowerSurname"'>убыванию наличия</option>
+            <option [ngValue]='"higherSurname"'>возрастанию наличия</option>
+          </select>
+            </form>
+        </div>
+    </div>
+    <table class='rounded table table-responsive-xl mt-4 bg-secondary'>
+        <thead class='text-white'>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Название</th>
+                <th scope="col">Вес</th>
+                <th scope="col">Наличие</th>
+                <th scope="col">Артикул</th>
+                <th scope="col">Цена</th>
+                <!-- <th scope="col">Группа</th>
+                <th scope="col">Возраст</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope='col'></th> -->
+            </tr>
+        </thead>
+        <tbody class='text-white'>
+            <tr scope='row' *ngFor="
+        let student of students
+          | course: course
+          | sortBy: sortType
+          | studentsfilter: searchSrt
+      ">
+                <th>{{ student.id }}</th>
+                <td *ngIf="!student.edit">{{ student.name }}</td>
+                <td *ngIf="!student.edit">{{ student.surname }}</td>
+                <td *ngIf="!student.edit">{{ student.patronymic }}</td>
+                <td *ngIf="!student.edit">{{ student.phone }}</td>
+                <td *ngIf="!student.edit">{{ student.price }}</td>
+                <!-- <td *ngIf="!student.edit">{{ student.group }}</td>
+                <td *ngIf="!student.edit">{{ getAge(student.date) }}</td> -->
+
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [(ngModel)]="student.name" />
+                </td>
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [(ngModel)]="student.surname" />
+                </td>
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [(ngModel)]="student.patronymic" />
+                </td>
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [(ngModel)]="student.phone" />
+                </td>
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [(ngModel)]="student.price" />
+                </td>
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [(ngModel)]="student.group" />
+                </td>
+                <td *ngIf="student.edit">
+                    <input style='width:120%' type="text" [ngModel]="student.date | date: 'dd/mm/yyyy'" (ngModelChange)='student.date=$event' />
+                </td>
+
+                <td>
+                    <button class="btn btn-primary btn-sm" (click)="editThisStudent(student)">
+          Изменить
+        </button>
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="deleteThisStudent(student.id)">
+          Удалить
+        </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
